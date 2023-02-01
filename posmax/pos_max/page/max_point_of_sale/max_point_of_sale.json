@@ -1,0 +1,33 @@
+{
+ "content": null,
+ "creation": "2023-01-28 01:33:43.225285",
+ "docstatus": 0,
+ "doctype": "Page",
+ "idx": 0,
+ "modified": "2023-01-28 01:33:43.225285",
+ "modified_by": "Administrator",
+ "module": "POS MAX",
+ "name": "max-point-of-sale",
+ "owner": "Administrator",
+ "page_name": "max-point-of-sale",
+ "restrict_to_domain": "",
+ "roles": [
+  {
+   "role": "Accounts User"
+  },
+  {
+   "role": "Accounts Manager"
+  },
+  {
+   "role": "Sales User"
+  },
+  {
+   "role": "Sales Manager"
+  }
+ ],
+ "script": null,
+ "standard": "Yes",
+ "style": null,
+ "system_page": 0,
+ "title": "MAX Point of Sale"
+}

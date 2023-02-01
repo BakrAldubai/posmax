@@ -57,7 +57,7 @@ app_license = "MIT"
 # ------------
 
 # before_install = "posmax.install.before_install"
-# after_install = "posmax.install.after_install"
+after_install = "posmax.posmax.install.after_install"
 
 # Uninstallation
 # ------------
