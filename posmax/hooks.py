@@ -87,9 +87,9 @@ after_install = "posmax.posmax.install.after_install"
 # ---------------
 # Override standard doctype classes
 
-# override_doctype_class = {
-# 	"ToDo": "custom_app.overrides.CustomToDo"
-# }
+override_doctype_class = {
+	"Sales Invoice": "posmax.core_overrides.sales_invoice.CustomSalesInvoice"
+}
 
 # Document Events
 # ---------------
