@@ -1,17 +1,24 @@
 {
  "actions": [],
- "autoname": "format:{cashier_name}",
  "creation": "2023-01-28 04:41:38.355330",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
   "employee",
-  "cashier_name",
+  "user_id",
+  "column_break_3",
+  "company",
   "branch",
+  "section_break_5",
+  "email",
+  "first_name",
+  "last_name",
+  "full_name",
   "column_break_2",
-  "create_user",
-  "user_id"
+  "date_of_birth",
+  "date_of_joining",
+  "gender"
  ],
  "fields": [
   {
@@ -19,24 +26,14 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Employee",
-   "options": "Employee",
-   "reqd": 1
+   "options": "Employee"
   },
   {
    "fieldname": "user_id",
    "fieldtype": "Link",
-   "label": "User ID",
+   "label": "User",
    "options": "User",
-   "read_only": 1,
-   "reqd": 1
-  },
-  {
-   "allow_in_quick_entry": 1,
-   "fetch_from": "employee.employee_name",
-   "fieldname": "cashier_name",
-   "fieldtype": "Data",
-   "label": "Cashier Name",
-   "read_only": 1
+   "unique": 1
   },
   {
    "allow_in_quick_entry": 1,
@@ -44,23 +41,75 @@
    "fieldtype": "Column Break"
   },
   {
-   "default": "0",
-   "depends_on": "eval: !doc.user_id ",
-   "fieldname": "create_user",
-   "fieldtype": "Check",
-   "label": "Create User"
-  },
-  {
-   "fetch_from": "employee.branch",
    "fieldname": "branch",
    "fieldtype": "Link",
    "label": "Branch",
    "options": "Branch"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "read_only_depends_on": "eval: doc.employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "label": "Date of Birth",
+   "read_only_depends_on": "eval: doc.employee"
+  },
+  {
+   "fieldname": "date_of_joining",
+   "fieldtype": "Date",
+   "label": "Date of Joining",
+   "read_only_depends_on": "eval: doc.employee"
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Link",
+   "label": "Gender",
+   "options": "Gender",
+   "read_only_depends_on": "eval: doc.employee"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "label": "First Name",
+   "read_only_depends_on": "eval: doc.employee"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "read_only_depends_on": "eval: doc.user_id"
+  },
+  {
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "label": "Last Name",
+   "read_only_depends_on": "eval: doc.employee"
+  },
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "label": "Full Name",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-01-28 05:34:56.952153",
+ "modified": "2023-02-07 03:12:20.483780",
  "modified_by": "Administrator",
  "module": "POS MAX",
  "name": "Cashier",
@@ -93,5 +142,5 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "title_field": "cashier_name"
+ "title_field": "user_id"
 }

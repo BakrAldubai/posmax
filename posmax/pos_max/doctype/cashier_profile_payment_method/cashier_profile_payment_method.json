@@ -1,0 +1,55 @@
+{
+ "actions": [],
+ "creation": "2023-02-02 04:37:34.751115",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "default",
+  "allow_in_returns",
+  "mode_of_payment",
+  "mode_of_payment_currency"
+ ],
+ "fields": [
+  {
+   "default": "0",
+   "depends_on": "eval:parent.doctype == 'POS Profile'",
+   "fieldname": "default",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Default"
+  },
+  {
+   "default": "0",
+   "fieldname": "allow_in_returns",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Allow In Returns"
+  },
+  {
+   "fieldname": "mode_of_payment",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Mode of Payment",
+   "options": "Mode of Payment",
+   "reqd": 1
+  },
+  {
+   "fieldname": "mode_of_payment_currency",
+   "fieldtype": "Currency",
+   "label": "Mode of Payment Currency"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-02-02 04:37:34.751115",
+ "modified_by": "Administrator",
+ "module": "POS MAX",
+ "name": "Cashier Profile Payment Method",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}
